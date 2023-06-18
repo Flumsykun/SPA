@@ -21,6 +21,45 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#rollNo').value = '';
     }
 
+    // Function to load student data from the database
+    function loadStudentData() {
+        $.ajax({
+        url: '../php/get_student.php',
+        method: 'GET',
+        success: function(response) {
+            var students = JSON.parse(response);
+            renderStudentTable(students);
+        },
+        error: function(xhr, status, error) {
+            console.log('Error: ' + error);
+        }
+        });
+    }
+
+        // Function to render student table
+    function renderStudentTable(students) {
+        var studentTable = $('#student-list');
+        studentTable.empty();
+    
+        if (students.length > 0) {
+        students.forEach(function(student) {
+            var row = $('<tr>');
+            row.append($('<td>').text(student.firstName));
+            row.append($('<td>').text(student.lastName));
+            row.append($('<td>').text(student.rollNo));
+            row.append($('<td>').html('<a href="#" class="btn btn-warning btn-sm edit">Edit</a> <a href="#" class="btn btn-danger btn-sm delete">Delete</a>'));
+            studentTable.append(row);
+        });
+        } else {
+        var row = $('<tr>');
+        row.append($('<td colspan="4">').text('No students found.'));
+        studentTable.append(row);
+        }
+    }
+    
+         // Call the loadStudentData function to fetch and render student data
+        loadStudentData();
+
     //Add Data to database
     function addStudentToDatabase(firstName, lastName, rollNo){
         $.ajax({
