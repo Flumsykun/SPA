@@ -1,55 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--Favicon-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!--CSS File-->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="..//css/grid.css">
-    <!--Box Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!--CSS File-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="..//css/grid.css">
+  <!--Box Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
+
 <body>
-    <!--navbar-->
-    <header>
-        <a href="#" class="logo">JML_VDR</a>
+  <!--navbar-->
+  <!-- <header>
+        <a href="#" class="logo">SPA APP</a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
             <li><a href="#home">Home</a></li>
             <li><a href="#">Content</a></li>
-            <li><a href="#">#</a></li>
-            <li><a href="#">#</a></li>
-            <div class="bx bx-moon" id="darkmode"></div>
+          <div class="bx bx-moon" id="darkmode"></div>
         </ul>    
-    </header>
- <!--navbar-->
+    </header> -->
+  <!--navbar-->
+
 
   <!-- Content -->
-  <section class = "content" id="content"></section>
-  <div class="container mt-4">
-    <h1>Welcome to your Social Media Dashboard</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Facebook</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-        <a href="facebook/index.html" class="btn btn-primary">Go to Facebook</a>
+  <div class="container mt-5">
+    <div class="text-center">
+      <h1 class="display -5 mb-5"><strong>SPA APP</strong></h1>
+    </div>
+    <div class="main row justify-content-center">
+      <form action="" id="student-form" class="row justify-content-center mb-4" autocomplete="off">
+        <div class="col-11 mb-4">
+          <label for="firstName">Voor naam</label>
+          <input class="form-control" id="firstName" type="text" placeholder="Vul uw voor naam in...">
+        </div>
+        <div class="col-11 mb-4">
+          <label for="lastName">Achter naam</label>
+          <input class="form-control" id="lastName" type="text" placeholder="Vul achter naam in...">
+        </div>
+        <div class="col-11 mb-4">
+          <label for="rollNo">Roll no</label>
+          <input class="form-control" id="rollNo" type="text" placeholder="Vul rol no in...">
+        </div>
+        <div class="col-11">
+          <input class="btn btn-success add-btn" type="submit" value="submit">
+        </div>
+      </form>
+      <div class="col-11 mt-5">
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th>Voornaam</th>
+              <th>Achternaam</th>
+              <th>Roll No</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="student-list">
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>25</td>
+              <td>
+                <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
+                <a href="#" class="btn btn-danger btn-sm delete">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <div class="col-md-6">
-        <h2>Twitter</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-        <a href="twitter/index.html" class="btn btn-primary">Go to Twitter</a>
-      </div>
+    </div>
   </div>
   <!-- Content -->
 
   <!-- Footer -->
-  <footer class="bg-light py-4 mt-4">
-    <div class="container text-center">
+  <footer class="bg-white py-4 mt-4">
+    <div class="container fixed-bottom  text-center">
       <p>&copy; 2023 Jamil van de Ree. All rights reserved.</p>
     </div>
   </footer>
@@ -57,6 +90,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   <script src="..//js/script.js"></script>
+  <script src="..//js/script.js"></script>
 </body>
+
 </html>
